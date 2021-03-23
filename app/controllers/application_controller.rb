@@ -6,7 +6,12 @@ class ApplicationController < Sinatra::Base
 
     get '/' do
         "whats good git!!!"
+
+        
     end
+
+
+    
 
 
 end

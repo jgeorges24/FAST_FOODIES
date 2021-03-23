@@ -8,3 +8,8 @@
 Bundler.require
 require 'bundler/setup'
 require_all './app'
+
+ActiveRecord::Base.establish_connection ({
+    :adapter => "sqlite3"
+    :database => "db/foods.sqlite3"
+})
