@@ -7,6 +7,7 @@
 
 Bundler.require
 require 'bundler/setup'
+require 'dotenv/load'
 require_all 'app'
 
 ActiveRecord::Base.establish_connection({

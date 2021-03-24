@@ -1,4 +1,9 @@
+User.create (
+    name:"macy"
+    username: "macycrazy"
+    password: "password"
 
+)
 
 Food.create(
 
