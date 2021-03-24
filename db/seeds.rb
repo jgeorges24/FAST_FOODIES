@@ -25,3 +25,4 @@ Food.create(
     healthy: true,
     
 )
+

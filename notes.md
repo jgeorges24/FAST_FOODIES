@@ -5,3 +5,4 @@ allows user to CRUD rows or food in foods table
 
 
 change colum in user to password_digest 
+install bcrypt

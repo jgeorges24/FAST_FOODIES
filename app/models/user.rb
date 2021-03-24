@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-has_many :foods
+    has_many :foods
+    has_secure_password
 
 #foods returns all the foods 
 # foods<< save to database
