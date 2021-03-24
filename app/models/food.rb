@@ -1,4 +1,4 @@
-class Foodie < ActiveRecord::Base
+class Food < ActiveRecord::Base
     belongs_to :user
 
     #class all method

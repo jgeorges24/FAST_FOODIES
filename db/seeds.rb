@@ -1,6 +1,6 @@
 
 
-Foodie.create(
+Food.create(
 
     name: "Burger-King",
     price: 10,
@@ -9,7 +9,7 @@ Foodie.create(
     
 )
 
-Foodie.create(
+Food.create(
 
     name: "kfc",
     price: 15,
@@ -17,7 +17,7 @@ Foodie.create(
     healthy: false,
     
 )
-Foodie.create(
+Food.create(
 
     name: "wendys",
     price: 12,
