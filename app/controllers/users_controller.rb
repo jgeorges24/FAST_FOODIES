@@ -11,14 +11,26 @@ class UsersController < ApplicationController
     #signup route POST to take data and generate new user
     post '/signup' do
         #takes data to make new user
-
+        users = User.new(params["user"])
  
         #also if that user is valid redirect to /foods
-
+        if user.save
+            session["user_id"] = user.id
+            redirect "/foods"
+            
         
-        
-        #if user not valid, send back to /signup page erb
+            #if user not valid, send back to /signup page erb
+        else
+            redirect "/login" 
+        end   
     end
 
+    #log out method
+    delete '/logout' do
+        session.delete("user_id")
+        redirect "/login"
+
+        
+    end
 
 end

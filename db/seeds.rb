@@ -1,8 +1,14 @@
-User.create (
-    name:"macy"
-    username: "macycrazy"
-    password: "password"
+# User.create(
+#     name:"macy",
+#     username: "macycrazy",
+#     password: "password"
 
+# )
+
+User.create(
+    name:"king",
+    username: "jadaBaby",
+    password: "password"
 )
 
 Food.create(
