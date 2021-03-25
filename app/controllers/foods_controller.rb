@@ -2,6 +2,8 @@ class FoodsController < ApplicationController
 
 #read all foods
 get '/foods' do
+    # @food = current_user.foods
+    #redirect "/login" if !logged_in?
     @foods = Food.all
     erb :'foods/index'
 end
@@ -9,6 +11,8 @@ end
 #create new food (render form)
 
 get '/foods/new' do
+
+    #redirect "/login" if !logged_in?
     erb :'foods/new'
 end
 

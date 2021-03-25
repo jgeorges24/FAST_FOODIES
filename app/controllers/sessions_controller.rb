@@ -15,8 +15,8 @@ class SessionsController < ApplicationController
     #login route post
     post '/login' do
         #take data to find user
+        #binding.pry
         user = User.find_by(username: params["user"]["username"])
-
         #if that user is authenticated, log in, redirect /foods or home page of user
         if user && user.authenticate(params["user"]["password"])
             session["user_id"] = user.id
@@ -26,8 +26,6 @@ class SessionsController < ApplicationController
         else
             redirect "/login"
         end
-
-
     end
 
 
