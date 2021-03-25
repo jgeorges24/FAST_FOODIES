@@ -21,3 +21,5 @@ questions
 9. use private methods to make this easire with protecting info only for current user
 
 10. create foods form for entry of foods row ie food name, price, 
+
+11. use the private method in food_controller to redirect if not user to protect those routes from being seen
