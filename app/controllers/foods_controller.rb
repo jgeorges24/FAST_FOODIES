@@ -58,7 +58,7 @@ class FoodsController < ApplicationController
 
     #delete 1 food 
 
-    delete "/foods/:id" do
+    delete '/foods/:id' do
         redirect "/login" if !logged_in?
         food = Food.find_by_id(params[:id])
         food.destroy
