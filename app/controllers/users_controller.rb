@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     
     #signup route FORM
     get '/signup' do
-        "hello render the sign up form here"
+        # "hello render the sign up form here"
         erb :"users/new"
     end
     
