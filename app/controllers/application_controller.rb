@@ -1,6 +1,6 @@
 
 class ApplicationController < Sinatra::Base
-    set :views, Proc.new { File.join(root, "../views") }
+    #set :views, Proc.new { File.join(root, "../views") }
 
     configure do
         set :views, 'app/views'
@@ -11,7 +11,7 @@ class ApplicationController < Sinatra::Base
     end
 
     get '/' do
-        "home page"
+        erb :fastfood
         
 
         

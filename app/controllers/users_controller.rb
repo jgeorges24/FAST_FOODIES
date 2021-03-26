@@ -16,8 +16,13 @@ class UsersController < ApplicationController
         #also if that user is valid redirect to /foods
         if user.save
             session["user_id"] = user.id
+
+
             #use binding pry to check if user is accurate
             #binding.pry
+            
+            
+            
             redirect '/foods'
             #if user not valid, send back to /signup page erb
         else

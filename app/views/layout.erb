@@ -7,7 +7,20 @@
 </head>
 <body>
 <h1> this is where all the other stuff goes nav bar and styles </h1>
+<nav>
+    <a href= "/"> home </a>
+    
+    <% if logged_in? %>
+        <a href= "/foods/new"> food entry </a>
+        <a href= "/foods"> all my foods  </a>
+        
+    <% else %>
+        <a href= "/login"> login </a>
+        <a href= "/signup"> signup  </a>
+    <% end %>
+    
 
+</nav>
     <%= yield %>
 
     <% if logged_in? %>
