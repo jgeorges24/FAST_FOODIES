@@ -47,3 +47,25 @@ done up top
 
 
 15. able to sign up even though i'm still logged in, this should not be possible.
+
+
+NEW NOTES
+
+1. delete button not going through or responding on show erb page, Rack::methodoverride
+
+2. search bar to delete a food entry
+
+3. tough to fix or error handle like after deleting an entry and if a user goes tot hat entry it gives an error, for example if i delete food entry ID 3, and i load that :ID, ex.. /Foods/3 i get an error
+
+4. UPDATE FOOD ENTRY BUTTON NOT PUSHING thROUGH tO EDIT PAGE FOR FOOD ENTRY -- USED a tags instead
+
+5. RENDER A 404 page for the results or food entrys not listed
+
+
+work on
+
+home page 
+
+user login home page
+
+background
