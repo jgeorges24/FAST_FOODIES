@@ -1,39 +1,35 @@
 class FoodsController < ApplicationController
 
-get '/test' do
-    @foods = Food.all
-    erb :'foods/index'
-end
 
-    #read all foods
+    #read current user foods
     get '/foods' do
-
-        @foods = current_user.foods
-
-        redirect "/login" if !logged_in?
         
+        redirect_not_logged
+        
+        @foods = current_user.foods
+       
         erb :'foods/index'
     end
 
     #create new food (render form)
-
     get '/foods/new' do
+        redirect_not_logged
 
-        #redirect "/login" if !logged_in?
+        redirect "/login" if !logged_in?
         erb :'foods/new'
     end
 
     #read one food
-
     get '/foods/:id' do
+        redirect_not_logged
         @food = Food.find_by_id(params[:id])
         erb :'foods/show'
     end
 
-
     #create new food (save in db)
     post '/foods' do
         #binding.pry
+        redirect_not_logged
 
         #food = Food.new(params["food"])
         
@@ -44,12 +40,14 @@ end
 
         else
             "Error #{food.errors.full_messages.join(", ")}"
+    
         end
 
     end
 
     #update 1 food (render form)
     get '/foods/:id/edit' do
+        redirect_not_logged
         @food = Food.find_by_id(params[:id])
         erb :'foods/edit'
     end
@@ -57,6 +55,7 @@ end
 
     #update 1 food (save in db)
     patch '/foods/:id' do
+        redirect_not_logged
         food = Food.find_by_id(params[:id])
 
         if food.update(params["food"])
@@ -70,13 +69,19 @@ end
 
     delete '/foods/:id' do
 
-        redirect "/login" if !logged_in?
+        redirect_not_logged
+        
         food = Food.find_by_id(params[:id])
         food.destroy
         redirect "/foods"
     end
 
-
+    post '/search' do
+        redirect_not_logged
+        @food = Food.find_by(name: params["name"]) 
+        
+        redirect "/foods/#{@food.id}"
+    end
 
 
     private

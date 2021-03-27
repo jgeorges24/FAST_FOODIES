@@ -10,14 +10,10 @@ class ApplicationController < Sinatra::Base
 
     end
 
+    #should be home page
     get '/' do
-        erb :fastfood
-        
-
-        
+        erb :welcome
     end
-
-
     
     helpers do
         def current_user
@@ -28,6 +24,10 @@ class ApplicationController < Sinatra::Base
             !!current_user
         end
 
-    end
 
+        def redirect_not_logged
+
+            redirect "/login" if !logged_in?
+        end
+    end
 end

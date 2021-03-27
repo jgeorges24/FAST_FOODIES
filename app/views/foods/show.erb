@@ -1,16 +1,29 @@
+<h2> 
+    <%= @food.name %>  
+</h2> 
+<br>
 
-<h1> <%= @food.name %>  </h1> <br>
 <ul>
 <a href= "/foods/<%= @food.id %>/edit"> update entry </a> 
 <br>
 
-
+<div>
     <p> :The Price? <%= @food.price %> </li> </p>
 
     <p> :How was it? <%= @food.description %> </p>
 
-    <p> :Was it Healthy? <%= @food.healthy%> </p>  <br>
+    <p> :Was it Healthy? <% if @food.healthy %>
+        Yes Healthy 
+        <% elsif @food.healthy == false %>
+        nope!
+        <% else %>
+        Not sure!
+        <% end %>
 
+    </p>  
+</div>
+    <br>
+</ul>
     <form action="/foods/<%= @food.id %>" method ="POST">
         <input type="hidden" name="_method" value="DELETE">
         <input type="submit" value="Delete Food Entry">
@@ -18,4 +31,3 @@
     </form>
     <br>
  
-</ul>

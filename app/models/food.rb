@@ -5,6 +5,6 @@ class Food < ActiveRecord::Base
     #find/find_by
     #save
     #create
-
-
+#valedation very easy 
+    validates :name, :price, :description,  presence: true
 end
