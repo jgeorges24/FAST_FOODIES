@@ -84,6 +84,12 @@ class FoodsController < ApplicationController
         redirect "/foods/#{@food.id}"
     end
 
+    get "/iconpage" do
+
+
+        erb :iconpage
+    end
+
 
     private
 
