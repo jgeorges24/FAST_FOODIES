@@ -1,2 +1,28 @@
 <h1> WELCOME PAGE </h1>
 
+<div>
+
+        <% @foods.each do |x| %>
+
+        <table class="table">
+        <thead class="thead-dark">
+            <tr>
+            <th>#</th>
+            <th>NAME</th>
+            <th>PRICE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <th scope="row">
+            <%=""%></th>
+            <td><%= "#{x.name}"%></td>
+            <td><%="$#{x.price}.00"%></td>
+            </tr>
+           
+        </tbody>
+        </table>
+
+        <% end %>
+
+</div>

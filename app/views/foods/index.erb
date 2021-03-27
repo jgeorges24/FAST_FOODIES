@@ -1,15 +1,22 @@
 <h1> YOUR FOOD DIARY!</h1>
 
-<ul>
+
+
 
     <% @foods.each do |x| %>
-         
-            <%= "#{x.name}"%>: This item cost you
-            <%= "$#{x.price}.00"%> <br>
-            <%= "How it tasted: #{x.description}" %>
         
+        <div class="container">
+            <ol>
+            <%= "#{x.name}"%>: This item cost you
+            <%= "$#{x.price}.00"%> 
+            </ol>
+
+            <ol>
+            <%= "How it tasted: #{x.description}" %> <br>
+            </ol>
+            
+            </div>
         
         <% end %>
 
-</ul>
- 
+

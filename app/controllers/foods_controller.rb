@@ -5,7 +5,7 @@ class FoodsController < ApplicationController
     get '/foods' do
         
         redirect_not_logged
-        
+        #helper method
         @foods = current_user.foods
        
         erb :'foods/index'

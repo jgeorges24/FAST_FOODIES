@@ -12,6 +12,9 @@ class ApplicationController < Sinatra::Base
 
     #should be home page
     get '/' do
+        redirect_not_logged
+        @foods = current_user.foods
+        
         erb :welcome
     end
     
