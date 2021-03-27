@@ -26,6 +26,7 @@ class FoodsController < ApplicationController
         erb :'foods/show'
     end
 
+
     #create new food (save in db)
     post '/foods' do
         #binding.pry

@@ -3,11 +3,11 @@
 <ul>
 
     <% @foods.each do |x| %>
-        <li> 
+         
             <%= "#{x.name}"%>: This item cost you
             <%= "$#{x.price}.00"%> <br>
             <%= "How it tasted: #{x.description}" %>
-       </li> 
+        
         
         <% end %>
 
