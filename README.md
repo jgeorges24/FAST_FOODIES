@@ -12,3 +12,11 @@ FOOD DAIRY is a ruby x sinatra driven web app that takes in entries of your what
 
 FOOD DIARY SINATRA WEB APP/DEMO
 CLICK HERE link https://www.youtube.com/watch?v=_m4uk-LCA0g
+
+#FORK CLONE github Instructions
+
+Fork and clone this repo. open it in VS code and type "bundle install" to make sure you have those gems installed and right after lets make sure we run "shotgun".
+lets then open our broswer to "http://127.0.0.1:9393/"
+
+
+
