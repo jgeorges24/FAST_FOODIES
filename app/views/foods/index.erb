@@ -7,7 +7,7 @@
         
         <div class="container">
             <ol>
-            <%= "#{x.name}"%>: This item cost you
+            <a href="/foods/<%= x.id %>"> <%= "#{x.name}"%> </a> : This item cost you
             <%= "$#{x.price}.00"%> 
             </ol>
 
