@@ -11,4 +11,4 @@ FOOD DAIRY is a ruby x sinatra driven web app that takes in entries of your what
 ## sample/Demo Video of Food Diary Web App
 
 FOOD DIARY SINATRA WEB APP/DEMO
-CLICK HERE
+CLICK HERE link https://www.youtube.com/watch?v=_m4uk-LCA0g
