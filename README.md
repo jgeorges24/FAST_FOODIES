@@ -1,4 +1,4 @@
-# FAST_FOODIES
+# FOOD DIARY
 
 FOOD DAIRY is a ruby x sinatra driven web app that takes in entries of your what you eat and stroes it for you to later come back and see what you ate recently and how you felt about it.
 
