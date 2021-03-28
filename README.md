@@ -19,4 +19,30 @@ Fork and clone this repo. open it in VS code and type "bundle install" to make s
 lets then open our broswer to "http://127.0.0.1:9393/"
 
 
+#Contributing
 
+JEAN GEORGES and open for more support and asstiance.
+
+#USAGE
+
+<div class="container">
+        <H1> SIGN UP PAGE </H1>
+
+        <form action="/signup" method="post">
+            <input type="name" name="user[name]" placeholder="name"> <br>
+            <input type="username" name="user[username]" placeholder="username"> <br>
+            <input type="password" name="user[password]" placeholder="password"> <br>
+            <input type="submit" value="Create Account"/>
+        </form>
+        <h7>Already have an account click "Sign In" below </h7> <br>
+        <a class="btn btn-primary" href="/login" role="button">Sign In</a>
+</div>
+
+
+#Code Of Conduct
+
+Play nice you know right from wrong, so lets contribute peacfully and no negative vibes.
+use code respecfully.
+
+#LICESNE 
+MIT
