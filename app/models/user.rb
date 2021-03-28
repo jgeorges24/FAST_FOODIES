@@ -7,5 +7,5 @@ class User < ActiveRecord::Base
 # foods.delete(food obj)
 #foods.destroy(food obj)
 #foods= [food objs]
-    validates :username, uniqueness: true
+    validates :username, uniqueness: true, presence: true
 end

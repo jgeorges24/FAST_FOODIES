@@ -23,12 +23,17 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
+          <% if logged_in? %>
           <li class="nav-item">
             <a class="nav-link" href="/foods/new"> Create Food Entry </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/foods"> My Food Entry </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/user"> My Account </a>
+          </li>
+            <% end %>
 
         </ul>
         <form class="d-flex" action="/search" method="post">
@@ -41,14 +46,13 @@
         
         <div class= 'container-sm mt-5'>
         <div class='text-center'>
-        <% if !logged_in? %>
-        <a href="/signup"> PLEASE SIGNUP</a>
-        <% end %>
+       
+
             <%= yield %>
-            </div>
+        </div>
             
             <% if logged_in? %>
-            <br><br>
+            <br>
             <form action="/logout" method="post">
             <input type="hidden" name="_method" value="delete">
             <input type="submit" value="Logout">

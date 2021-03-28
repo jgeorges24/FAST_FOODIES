@@ -32,10 +32,20 @@ class UsersController < ApplicationController
 
     #log out method
     delete '/logout' do
+        
         session.delete("user_id")
         redirect "/login"
 
         
+    end
+
+
+    #account information route
+
+    get '/user' do
+        redirect_not_logged
+        @current_user ||= User.find_by_id(session["user_id"])
+            erb :account
     end
 
 end
