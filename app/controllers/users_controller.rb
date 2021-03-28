@@ -15,7 +15,7 @@ class UsersController < ApplicationController
  
         #also if that user is valid redirect to /foods
         if user.save
-            
+
             session["user_id"] = user.id
 
 
@@ -27,7 +27,7 @@ class UsersController < ApplicationController
             redirect '/foods'
             #if user not valid, send back to /signup page erb
         else
-
+            #"Error #{food.errors.full_messages.join(", ")}"
             redirect '/login'
 
         end   

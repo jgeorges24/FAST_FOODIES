@@ -23,6 +23,8 @@ class FoodsController < ApplicationController
     get '/foods/:id' do
         redirect_not_logged
         @food = Food.find_by_id(params[:id])
+        #@food = Food.find_by(:id params[:id])
+        #@food = Food.find_by(:name params[:name])
         erb :'foods/show'
     end
 
@@ -79,9 +81,13 @@ class FoodsController < ApplicationController
 
     post '/search' do
         redirect_not_logged
-        @food = Food.find_by(name: params["name"]) 
+        if
+        @food = Food.find_by(name: params["name"])
         
         redirect "/foods/#{@food.id}"
+    else ""
+        redirect "/foods"
+    end
     end
 
     get "/iconpage" do

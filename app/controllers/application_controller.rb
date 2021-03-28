@@ -14,7 +14,7 @@ class ApplicationController < Sinatra::Base
     get '/' do
         redirect_not_logged
         @foods = current_user.foods
-        
+        find_food
         erb :welcome
     end
     
@@ -27,6 +27,9 @@ class ApplicationController < Sinatra::Base
             !!current_user
         end
 
+        def find_food
+            @fd = Food.find_by_id(params[:id])
+        end
 
         def redirect_not_logged
 

@@ -1,7 +1,7 @@
 <h1> edit page </h1>
 
 
-<form action="/foods/<%= @food.id %>" method="post">
+<form action="/foods/<%=@food.id%>" method="post">
     <input id="hidden" type="hidden" name="_method" value="patch">
     <input type="name" name="food[name]" value= "<%= @food.name %>" placeholder="What did you eat"> <br>
     <input type="number" name="food[price]" value= "<%= @food.price %>" placeholder="Dollar amount"> <br>
