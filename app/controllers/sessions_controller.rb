@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
     get '/login' do
         #renders login form
         erb :'sessions/new'
+        
     
     end
 

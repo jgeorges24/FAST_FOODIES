@@ -7,14 +7,15 @@ class FoodsController < ApplicationController
         redirect_not_logged
         #helper method
         @foods = current_user.foods
+        xuser
        
         erb :'foods/index'
     end
 
-    #create new food (render form)
+    #create new food (render form) show an action
     get '/foods/new' do
         redirect_not_logged
-
+        xuser
         redirect "/login" if !logged_in?
         erb :'foods/new'
     end
@@ -23,17 +24,18 @@ class FoodsController < ApplicationController
     get '/foods/:id' do
         redirect_not_logged
         @food = Food.find_by_id(params[:id])
+        xuser
         #@food = Food.find_by(:id params[:id])
         #@food = Food.find_by(:name params[:name])
         erb :'foods/show'
     end
 
 
-    #create new food (save in db)
+    #create new food (save in db) Create Action
     post '/foods' do
         #binding.pry
         redirect_not_logged
-
+        xuser
         #food = Food.new(params["food"])
         
         food = current_user.foods.build(params["food"])
@@ -51,6 +53,7 @@ class FoodsController < ApplicationController
     #update 1 food (render form)
     get '/foods/:id/edit' do
         redirect_not_logged
+        xuser
         @food = Food.find_by_id(params[:id])
         erb :'foods/edit'
     end
@@ -59,6 +62,7 @@ class FoodsController < ApplicationController
     #update 1 food (save in db)
     patch '/foods/:id' do
         redirect_not_logged
+        xuser
         food = Food.find_by_id(params[:id])
 
         if food.update(params["food"])
@@ -73,7 +77,7 @@ class FoodsController < ApplicationController
     delete '/foods/:id' do
 
         redirect_not_logged
-        
+        xuser
         food = Food.find_by_id(params[:id])
         food.destroy
         redirect "/foods"
@@ -81,6 +85,7 @@ class FoodsController < ApplicationController
 
     post '/search' do
         redirect_not_logged
+        xuser
         if
         @food = Food.find_by(name: params["name"])
         
@@ -92,7 +97,7 @@ class FoodsController < ApplicationController
 
     get "/iconpage" do
 
-
+        xuser
         erb :iconpage
     end
 
